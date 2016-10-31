@@ -1,0 +1,152 @@
+
+<!--{template common/header}-->
+<!--[name][delight频道列表页][/name]-->
+<!--{eval $list = array();}-->
+<!--{eval $wheresql = category_get_wheresql($cat);}-->
+<!--{eval $list = category_get_list($cat, $wheresql, $page);}-->
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
+		<a href="$_G[setting][navs][1][filename]">{lang portal}</a> <em>&rsaquo;</em>
+		<!--{loop $cat[ups] $value}--> <a href="{$portalcategory[$value['catid']]['caturl']}">$value[catname]</a><em>&rsaquo;</em><!--{/loop}-->
+		$cat[catname]
+	</div>
+</div>
+<div class="clear"></div>
+<!--{ad/text/wp a_t}-->
+<style id="diy_style" type="text/css"></style>
+<div class="wp">
+	<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+</div>
+
+<div id="ct" class="ct2 wp cl">
+	<div class="mn">
+    	<div class="deanp_onertitle1">
+            <h4>网站&nbsp;&middot;<span>$cat[catname]</span></h4>
+            <div class="deannstr1">
+                <!--{ad/articlelist/mbm hm/1}--><!--{ad/articlelist/mbm hm/2}-->
+                <!--[diy=listcontenttop]--><div id="listcontenttop" class="area"></div><!--[/diy]-->
+                <!--{if $_G[setting][rssstatus] && !$_GET['archiveid']}--><a href="portal.php?mod=rss&catid=$cat[catid]" class="deanrssartice" target="_blank" title="RSS"></a><!--{/if}-->
+                    <!--{if ($_G['group']['allowpostarticle'] || $_G['group']['allowmanagearticle'] || $categoryperm[$catid]['allowmanage'] || $categoryperm[$catid]['allowpublish']) && empty($cat['disallowpublish'])}-->
+                    <a href="portal.php?mod=portalcp&ac=article&catid=$cat[catid]" class="deanaddnew" title="发布文章"></a>
+                    <!--{/if}-->
+        	</div>
+        </div>
+        <!--[diy=listloopbottom]--><div id="listloopbottom" class="area"></div><!--[/diy]-->
+        <div class="clear"></div>
+        <div class="deanartice">
+        	<ul>
+            	<!--{loop $list['list'] $value}-->
+				<!--{eval $highlight = article_title_style($value);}-->
+				<!--{eval $article_url = fetch_article_url($value);}-->
+        		<li class="top10 bgfff deanradius4">
+                    <div class="deanarticec">
+                        <div class="deanarticel">
+                            <!--{if $value[pic]}--><div class="atc"><a href="$article_url" target="_blank"><img src="$value[pic]" alt="$value[title]" width="215" height="145"/></a></div><!--{else}--><div class="atc"><a href="$article_url" target="_blank"><img src="$_G['style'][styleimgdir]/nopic.jpg" width="215" height="145" /></a></div><!--{/if}-->
+                        </div>
+                        <div class="deanarticer">
+                            <div class="deanarticername"><a href="$article_url" target="_blank" class="xi2" $highlight>$value[title]</a> <!--{if $value[status] == 1}-->({lang moderate_need})<!--{/if}--></div>
+                            <div class="clear"></div>
+                            <div class="deanarticersummary">$value[summary]&hellip;&hellip;</div>
+                            <div class="deanarticertag"><div class="deanarticerforum"><!--{if $value[catname] && $cat[subs]}-->{lang category}: <a href="{$portalcategory[$value['catid']]['caturl']}" class="xi2">$value[catname]</a>&nbsp;&nbsp;<!--{/if}--></div> <div class="deanarticerauthor"><span> $value[dateline]</span></div><div class="clear"></div></div>
+                        </div>
+                        <div class="clear"></div>
+                        <!--<div class="deanarticecomment"><a href="{url}" target="_blank">$value[view]</a></div>-->
+                    </div>
+				</li>	
+                <!--{/loop}-->
+        	</ul>
+        </div>
+		<div class="clear"></div>
+		<!--{ad/articlelist/mbm hm/3}--><!--{ad/articlelist/mbm hm/4}-->
+		<!--{if $list['multi']}--><div class="pgs cl" id="deanpage">{$list['multi']}</div><!--{/if}-->
+
+		<!--[diy=diycontentbottom]--><div id="diycontentbottom" class="area"></div><!--[/diy]-->
+
+	</div>
+	<div class="sd pph">
+		<!--{if $cat[subs]}-->
+        <div class="deannextnav">
+        	<div class="deanp_onertitle1">
+            	<h4>网站&nbsp;&middot;<span>{lang sub_category}</span></h4>
+            </div>
+            <ul>
+            <!--{eval $i = 1;}-->
+            <!--{loop $cat[subs] $value}-->
+            <!--{if $i != 1}--><!--{/if}--><li><a href="{$portalcategory[$value['catid']]['caturl']}" >$value[catname]</a></li><!--{eval $i--;}-->
+            <!--{/loop}-->
+            <div class="clear"></div>
+            </ul>
+        </div>
+        <!--{/if}-->
+        <div class="clear"></div>
+		<script type="text/javascript">
+        	jq(".deannextnav ul li:odd").css({"margin-right":"10"});
+        </script>
+		<div class="deantj top10 bgfff">
+            	<div class="deanp_onertitle1">
+                    <h4>精华&nbsp;&middot;<span>推荐</span></h4>
+                    <div class="deannstr"><a href="http://www.adminbuy.cn" target="_blank" title="更多">More</a></div>
+                </div>
+                <ul>
+                	<!--[diy=diycontentbottomclear]--><div id="diycontentbottomclear" class="area"></div><!--[/diy]-->
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="deantj top10 bgfff">
+            	<div class="deanp_onertitle1">
+                    <h4>热门&nbsp;&middot;<span>焦点</span></h4>
+                    <div class="deannstr"><a href="http://www.adminbuy.cn" target="_blank" title="更多">More</a></div>
+                </div>
+                <ul class="deanremen">
+                	<!--[diy=deanremen]--><div id="deanremen" class="area"></div><!--[/diy]-->
+                	
+                    <div class="clear"></div>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="deantab top15 bgfff">
+            	<div class="deanp_onertitle1">
+                    <h4>热点&nbsp;&middot;<span>排行</span></h4>
+                </div>
+            	<div class="deantitles">
+                	<ul>
+                    	<li class="cur"><span class="yahei">月排行</span></li>
+                        <li><span class="yahei">周排行</span></li>
+                        <li><span class="yahei">日排行</span></li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            	<div class="deantabc">
+                	<ul>
+                    	<li style="display:block;"><dl><!--[diy=diydeanrank1]--><div id="diydeanrank1" class="area"></div><!--[/diy]--></dl></li>
+                        <li><dl><!--[diy=diydeanrank2]--><div id="diydeanrank2" class="area"></div><!--[/diy]--></dl></li>
+                        <li><dl><!--[diy=diydeanrank3]--><div id="diydeanrank3" class="area"></div><!--[/diy]--></dl></li>
+                    </ul>
+                </div>
+				<script type="text/javascript">
+                    jq(".deantitles li").each(function(f){
+                        jq(this).click(function(){
+                            jq(this).addClass("cur").siblings().removeClass("cur");
+                            jq(".deantabc li").eq(f).show().siblings().hide();
+                            })
+                        })
+                </script>
+            </div>
+            <div class="clear"></div>
+            <div class="deanad h20" style="margin-top:20px;">
+                <div class="deanp_onertitle1">
+                    <h4>广告&nbsp;&middot;<span>推广</span></h4>
+                </div>
+                <div class="deanadc top20"><!--[diy=dss]--><div id="dss" class="area"></div><!--[/diy]--></div>
+            </div>
+            <div class="clear"></div>
+
+	</div>
+</div>
+<div class="wp mtn">
+	<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+</div>
+
+<!--{template common/footer}-->

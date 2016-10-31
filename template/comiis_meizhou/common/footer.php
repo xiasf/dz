@@ -1,4 +1,4 @@
-<?php echo '忽悠兄 huyouxiong.com';exit;?>
+<?php echo '优购网 uogo8.com';exit;?>
 </div>
 <!--{if empty($topic) || ($topic[usefooter])}-->
 <!--{eval $focusid = getfocus_rand($_G[basescript]);}-->
@@ -62,11 +62,27 @@
 		</div>
 	</div>
 	<div class="comiis_Copyright cl">
-	Copyright &copy; 2014-2015 <a href="$_G['setting']['siteurl']" rel="nofollow" target="_blank">$_G['setting']['sitename']</a> <a href="$_G['setting']['siteurl']" rel="nofollow" target="_blank">$_G['setting']['siteurl']</a> 版权所有 All Rights Reserved.<br />
-	免责声明: 本网不承担任何由内容提供商提供的信息所引起的争议和法律责任。<br />
-	Powered by <a href="http://huyouxiong.com" target="_blank">忽悠兄</a> $_G['setting']['version']&nbsp;
-	<!---*感谢你对忽悠兄的支持, 为获得更多忽悠兄的技术支持和服务, 建议保留下面忽悠兄的版权连接，谢谢!*--->
-	技术支持: <A href="http://huyouxiong.com" target="_blank" rel="nofollow" title="Discuz模板">Discuz模板</A> <!--{if $_G['setting']['icp']}--><a href="http://www.miibeian.gov.cn/" target="_blank">$_G['setting']['icp']</a><!--{/if}--> <!--{if $_G['setting']['statcode']}-->$_G['setting']['statcode']<!--{/if}--> <!--{hook/global_footerlink}--> <!--{if $_G['setting']['site_qq']}--><a href="http://wpa.qq.com/msgrd?V=3&uin=$_G['setting']['site_qq']&Site=$_G['setting']['bbname']&Menu=yes&from=discuz" target="_blank" title="QQ"><img src="{IMGDIR}/site_qq.jpg" alt="QQ" /></a><!--{/if}-->
+		Copyright &copy; 2014-2015
+		<a href="$_G['setting']['siteurl']" rel="nofollow" target="_blank">$_G['setting']['sitename']</a>
+		版权所有 All Rights Reserved.
+		<br />
+		声明: 黄冈生活论坛是黄冈人的网上之声，需要大家文明发言共同维护。
+		<br />
+		Powered by
+		<a href="http://uogo8.com" target="_blank">优购网</a>
+		$_G['setting']['version']&nbsp;
+		<!--{if $_G['setting']['icp']}-->
+		<a href="http://www.miibeian.gov.cn/" target="_blank">$_G['setting']['icp']</a>
+		<!--{/if}-->
+		<!--{if $_G['setting']['statcode']}-->
+		$_G['setting']['statcode']
+		<!--{/if}-->
+		<!--{hook/global_footerlink}-->
+		<!--{if $_G['setting']['site_qq']}-->
+		<a href="http://wpa.qq.com/msgrd?V=3&uin=$_G['setting']['site_qq']&Site=$_G['setting']['bbname']&Menu=yes&from=discuz" target="_blank" title="QQ">
+			<img src="{IMGDIR}/site_qq.jpg" alt="QQ" />
+		</a>
+		<!--{/if}-->
 	</div>
 	<p>
 	  <a href="#" target="_blank"><img src="{$_G['style']['styleimgdir']}/jin01.gif"></a>
@@ -98,8 +114,8 @@
 		</p>
 	</div>
 	<div id="frt">
-		<p>Powered by <strong><a href="http://huyouxiong.com" target="_blank">dz商业模板</a></strong> <em>$_G['setting']['version']</em><!--{if !empty($_G['setting']['boardlicensed'])}--> <a href="http://www.adminbuy.cn" target="_blank">Licensed</a><!--{/if}--></p>
-		<p class="xs0">Copyright &copy; 2014-2015 Design: <a href="http://huyouxiong.com" target="_blank" rel="nofollow" title="_blank">忽悠兄</a></p>
+		<p>Powered by <strong><a href="http://uogo8.com" target="_blank">dz商业模板</a></strong> <em>$_G['setting']['version']</em><!--{if !empty($_G['setting']['boardlicensed'])}--> <a href="http://www.adminbuy.cn" target="_blank">Licensed</a><!--{/if}--></p>
+		<p class="xs0">Copyright &copy; 2014-2015 Design: <a href="http://uogo8.com" target="_blank" rel="nofollow" title="_blank">优购网</a></p>
 	</div>
 </div>
 <!--{/if}-->
@@ -197,32 +213,32 @@ if(h5n.issupport()) {
 </script>
 <!--{/if}-->
 <script type="text/javascript">
-function new_showTopLink() {
-	var ft = $('ft');
-	if(ft){
-		var scrolltop = $('scrolltop');
-		var viewPortHeight = parseInt(document.documentElement.clientHeight);
-		var scrollHeight = parseInt(document.body.getBoundingClientRect().top);
-		var basew = parseInt(ft.clientWidth);
-		var sw = scrolltop.clientWidth;
-		if (basew < 1500) {
-			var left = parseInt(fetchOffset(ft)['left']);
-			left = left < sw ? left * 2 - sw : left;
-			scrolltop.style.left = ( basew + left ) + 'px';
-		} else {
-			scrolltop.style.left = 'auto';
-			scrolltop.style.right = 0;
-		}
-		if (BROWSER.ie && BROWSER.ie < 7) {
-			scrolltop.style.top = viewPortHeight - scrollHeight - 150 + 'px';
-		}
-		if (scrollHeight < -100) {
-			scrolltop.style.visibility = 'visible';
-		} else {
-			scrolltop.style.visibility = 'hidden';
+	function new_showTopLink() {
+		var ft = $('ft');
+		if(ft){
+			var scrolltop = $('scrolltop');
+			var viewPortHeight = parseInt(document.documentElement.clientHeight);
+			var scrollHeight = parseInt(document.body.getBoundingClientRect().top);
+			var basew = parseInt(ft.clientWidth);
+			var sw = scrolltop.clientWidth;
+			if (basew < 1500) {
+				var left = parseInt(fetchOffset(ft)['left']);
+				left = left < sw ? left * 2 - sw : left;
+				scrolltop.style.left = ( basew + left ) + 'px';
+			} else {
+				scrolltop.style.left = 'auto';
+				scrolltop.style.right = 0;
+			}
+			if (BROWSER.ie && BROWSER.ie < 7) {
+				scrolltop.style.top = viewPortHeight - scrollHeight - 150 + 'px';
+			}
+			if (scrollHeight < -100) {
+				scrolltop.style.visibility = 'visible';
+			} else {
+				scrolltop.style.visibility = 'hidden';
+			}
 		}
 	}
-}
 </script>
 <!--{eval output();}-->
 </body>
