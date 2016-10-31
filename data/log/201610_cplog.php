@@ -113,3 +113,9 @@
 <?PHP exit;?>	1477895020	admin	1	127.0.0.1	portalcategory	GET={}; POST={};
 <?PHP exit;?>	1477895031	admin	1	127.0.0.1	portalcategory	GET={neworder={}; name={1=频道列表页; }; newsetindex=1; editsubmit=提交; }; POST={neworder={}; name={1=频道列表页; }; newsetindex=1; editsubmit=提交; };
 <?PHP exit;?>	1477895035	admin	1	127.0.0.1	portalcategory	GET={}; POST={};
+<?PHP exit;?>	1477896458	admin	1	127.0.0.1	portalcategory	GET={}; POST={};
+<?PHP exit;?>	1477896467	admin	1	127.0.0.1	article	GET={operation=list; catid=1; }; POST={};
+<?PHP exit;?>	1477896471	admin	1	127.0.0.1	portalcategory	GET={}; POST={};
+<?PHP exit;?>	1477896473	admin	1	127.0.0.1	portalcategory	GET={operation=edit; catid=1; }; POST={};
+<?PHP exit;?>	1477896492	admin	1	127.0.0.1	portalcategory	GET={operation=edit; catid=1; catname=频道列表页; perpage=15; maxpages=1000; signs={list={923a5d71712c21a1=1; e035c0ef3d842b9d=1; ad6f9550cba86d44=1; d7a45a1ae2e9d175=1; c5f25bd8e4108dfd=1; 2a9bff486bf0058e=1; }; view={03d6f5e5ecc26831=1; b800f4123f7b8427=1; 1cdbafc6a001f008=1; }; }; listprimaltplname=./template/dean_delight:portal/list_news; viewprimaltplname=./template/dean_delight:portal/view_new; allowpublish=1; notshowarticlesummay=1; allowcomment=1; closed=1; shownav=1; detailsubmit=提交; }; POST={catname=频道列表页; perpage=15; maxpages=1000; signs={list={923a5d71712c21a1=1; e035c0ef3d842b9d=1; ad6f9550cba86d44=1; d7a45a1ae2e9d175=1; c5f25bd8e4108dfd=1; 2a9bff486bf0058e=1; }; view={03d6f5e5ecc26831=1; b800f4123f7b8427=1; 1cdbafc6a001f008=1; }; }; listprimaltplname=./template/dean_delight:portal/list_news; viewprimaltplname=./template/dean_delight:portal/view_new; allowpublish=1; notshowarticlesummay=1; allowcomment=1; closed=1; shownav=1; detailsubmit=提交; };
+<?PHP exit;?>	1477896495	admin	1	127.0.0.1	portalcategory	GET={operation=edit; catid=1; }; POST={};
